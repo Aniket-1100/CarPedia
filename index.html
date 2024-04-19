@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+  <title>GearGuru</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      background-image: url(download.jpg);
+    }
+
+    header {
+      background-color: #333;
+      color: #f4f4f4;
+      text-align: center;
+      padding: 1em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-left: 5px;
+      position: relative;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    section {
+      margin: 20px;
+    }
+
+    .product {
+      display: flex;
+      align-items: center;
+      border: 2px solid black;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      color: #f4f4f4;
+      background-color: #262626;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #hood {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .product img {
+      max-width: 300px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    #quote {
+      font-style: italic;
+      text-align: center;
+      flex: 1;
+    }
+
+    #vintege {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    #1 {
+      width: 400px;
+    }
+
+    #2 {
+      text-align: right;
+    }
+
+    .game-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .game-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .car {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateX(100%);
+      animation: moveCar 3s infinite linear;
+    }
+
+    @keyframes moveCar {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(1000%);
+      }
+    }
+
+    #navigation {
+      display: flex;
+      justify-content: center;
+    }
+
+    #navigation a {
+      margin: 0 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">GearGuru</h1>
+  </header>
+  <nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+      aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light">
+            <i class="fab fa-google-plus-g"></i>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item" href="#" onclick="document.getElementById('log1id').style.display='block'">My
+              Account</a>
+            <a class="dropdown-item" href="form.html">Sign Up</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <div id="hood">
+    <h1 id="quote">"In the timeless elegance of chrome and leather,<br> where
+      each ride whispers stories of bygone eras."
+    </h1>
+    <img src="vintege.jpg" id="vintege" alt="Background Image" height="400px" width="200px">
+  </div>
+
+  <section>
+    <div class="product" id="div1" onmouseenter="change1('div1')" onmouseleave="change2('div1')">
+      <img src="mk1.jpg" alt="Product Image">
+      <div id="2">
+        <h2>SUPRA MK1</h2>
+        <p>The Toyota Supra MK1 is the first generation of the iconic Toyota Supra, The Toyota Supra MK1 was also known
+          as the A50 model. marked the beginning of the Supra lineage. Produced from 1978 to 1981, the MK1 Supra shared
+          its platform with the Toyota Celica but was positioned as a distinct, more performance-oriented model. The MK1
+          Supra featured a distinctive and sportier design compared to the standard Celica. It had a longer nose, unique
+          headlights, and a more pronounced front grille. The styling aimed to convey a sense of performance and
+          sophistication.<br><a href="mk1.html" class="btn btn-info">for more</a>
+        </p>
+      </div>
+    </div><br>
+    <div class="product" id="div2" onmouseenter="change1('div2')" onmouseleave="change2('div2')">
+      <img src="mk2.jpg" alt="Product Image">
+      <div id="2">
+        <h2>SUPRA MK2</h2>
+        <p>The Toyota Supra MK2 is the second generation of the iconic Toyota Supra, The Toyota Supra MK2 was also known
+          as the A60 model. Produced from 1981 to 1986, the MK2 Supra built upon the foundation laid by its predecessor,
+          the MK1, and set the stage for the more widely recognized MK3 and MK4 Supra models. The MK2 Supra featured a
+          more modern and aerodynamic design compared to its predecessor. It had pop-up headlights, a long hood, and a
+          distinctive rear end. The design aimed to provide a balance between sportiness and luxury. While the MK2 Supra
+          may not have achieved the same iconic status as its successors, it remains a classic among collectors and
+          enthusiasts of vintage Japanese sports cars.<br><a href="mk2.html" class="btn btn-info">for more</a>
+        </p>
+      </div>
+    </div><br>
+    <div class="product" id="div3" onmouseenter="change1('div3')" onmouseleave="change2('div3')">
+      <img src="mk3.jpg" alt="Product Image">
+      <div id="2">
+        <h2>SUPRA MK3</h2>
+        <p>The Toyota Supra MK3 is the third generation of the iconic Toyota Supra, The Toyota Supra MK3 was also known
+          as the A70 model. It was produced from 1986 to 1992 and represented a significant evolution from its
+          predecessor, the MK2. The MK3 Supra was known for its sleek design, improved performance,
+          and technological advancements. The MK3 Supra featured a more streamlined and aerodynamic design compared to
+          its boxy predecessor. It had pop-up headlights, a long nose, and a distinctive rear spoiler. The design
+          reflected the automotive trends of the late 1980s.<br><a href="mk3.html" class="btn btn-info">for more</a>
+        </p>
+      </div>
+    </div><br>
+    <div class="product" id="div4" onmouseenter="change1('div4')" onmouseleave="change2('div4')">
+      <img src="supra mk4.jpg" alt="Product Image">
+      <div id="2">
+        <h2>SUPRA MK4</h2>
+        <p>The Toyota Supra MK4 is the fourth generation of the iconic Toyota Supra, which made its debut in the market
+          back in 1993. The Supra MK4 was built on the Lexus SC platform, but it was 13 inches shorter than the Lexus.
+          Powering this beast was a 3.0L sequential turbo straight-six engine that churned out an impressive 320 hp of
+          maximum power. The Supra MK4 gained immense popularity among enthusiasts due to its blend of performance,
+          style, and reliability. It became a cult classic and is still highly sought after by collectors and fans of
+          Japanese sports cars. Unfortunately, production of the fourth-generation Supra ended in 2002.
+          <br><a href="mk4.html" class="btn btn-info">for more</a>
+        </p>
+      </div>
+    </div><br>
+    <div class="product" id="div5" onmouseenter="change1('div5')" onmouseleave="change2('div5')">
+      <img src="mk5.jpg" alt="Product Image">
+      <div id="2">
+        <h2>SUPRA MK5</h2>
+        <p>The fifth generation has been produced since March 2019 and went on sale in May 2019. The styling of
+          the original Supra was derived from the Toyota Celica, but it was longer. Starting in mid-1986, the A70 Supra
+          became a separate model from the Celica. In turn, Toyota also stopped using the prefix Celica and named the
+          car Supra. Owing to the similarity and past of the Celica's name, it is frequently mistaken for the Supra, and
+          vice versa. The first, second and third generations of the Supra were assembled at the Tahara plant in
+          Tahara, Aichi, while the fourth generation was assembled at the Motomachi plant in Toyota City. The 5th
+          generation of the Supra is assembled alongside the G29 BMW Z4 in Graz, Austria by Magna Steyr.
+          <br><a href="mk5.html" class="btn btn-info">for more</a>
+        </p>
+      </div>
+    </div><br>
+    <div class="product" id="div6" onmouseenter="change1('div6')" onmouseleave="change2('div6')">
+      <img src="challenger1.jpg" alt="Product Image">
+      <div id="2">
+        <h2>Dodge Challenger First Genration</h2>
+        <p>Introduced in the fall of 1969 for the 1970 model year, the first-generation Dodge Challenger was one of two
+          Chrysler E-body cars (the other being the Plymouth Barracuda).
+          Positioned to compete against the Mercury Cougar and Pontiac Firebird, it was a response to the Ford Mustang.
+          Built on the Chrysler E platform, it came in hardtop and convertible body styles, sharing major components
+          with the Plymouth Barracuda.
+          Engine options included the iconic 426 Hemi V8 and the 440 Magnum V8.
+          The Challenger R/T and T/A models are highly collectible today.<br><a href="challenger1.html"
+            class="btn btn-info">for more</a></p>
+      </div>
+    </div><br>
+    <div class="product" id="div7" onmouseenter="change1('div7')" onmouseleave="change2('div7')">
+      <img src="challenger2.jpg" alt="Product Image">
+      <div id="2">
+        <h2>Dodge Challenger Second Genration</h2>
+        <p>The second generation of the Dodge Challenger spans the model years 1978 to 1983. This era marked a departure
+          from the first-generation Challenger, which was produced from 1970 to 1974. The second-generation Challenger
+          was smaller and more compact, reflecting the changes in the automotive landscape during that time. The design
+          of the second-generation Challenger was influenced by the styling trends of the late 1970s and early 1980s. It
+          featured a more squared-off and aerodynamic shape compared to the first-generation model. The car was
+          available in various body styles, including a coupe and a three-door liftback. The second-generation
+          Challenger offered a range of engine options, including four-cylinder and V6 engines.
+          <br><a href="challenger2.html" class="btn btn-info">for more</a>
+        </p>
+      </div>
+    </div><br>
+    <div class="product" id="div8" onmouseenter="change1('div8')" onmouseleave="change2('div8')">
+      <img src="challenger 3rd.jpg" alt="Product Image">
+      <div id="2">
+        <h2>Dodge Challenger Third Genration</h2>
+        <p>The Dodge Challenger third generation encompasses the models produced from 2008 onwards. The
+          third-generation Challenger marked a significant revival of the iconic muscle car, blending modern
+          technology with the classic design cues that made the Challenger a legend in the 1970s. It embraced
+          a retro-inspired design, incorporating elements such as the split grille, round headlights, and a
+          prominent hood scoop reminiscent of the original model.The lineup included a range of V6 and V8 engines, with
+          some of the higher-performance trims featuring HEMI V8 engines, delivering substantial horsepower and torque.
+          <br><a href="challenger3.html" class="btn btn-info">for more</a>
+        </p>
+      </div>
+    </div><br>
+    <div class="product" id="div10" onmouseenter="change1('div10')" onmouseleave="change2('div10')">
+      <img src="eldorado3.jpg" alt="Product Image">
+      <div id="2">
+        <h2>Cadilac Eldorado 1959-2002</h2>
+        <p>The Cadillac Eldorado was a luxury car manufactured and marketed by Cadillac from 1953 until 2002 over twelve
+          generations. It was positioned at or near the top of the Cadillac lineup throughout its production. The
+          Cadillac Eldorado was a luxury car manufactured and marketed by Cadillac from 1953 until 2002 over twelve
+          generations. It was positioned at or near the top of the Cadillac lineup throughout its production.
+          <br><a href="eldorado.html" class="btn btn-info">for more</a>
+        </p>
+      </div>
+    </div><br>
+    <div class="product" id="div9" onmouseenter="change1('div9')" onmouseleave="change2('div9')">
+      <img src="gtr69.jpg" alt="Product Image">
+      <div id="2">
+        <h2>Nissan Skyline-1st Gen</h2>
+        <p>The Nissan GT-R, often referred to as the "Godzilla," has a rich history that spans several decades. The
+          first GT-R badge appeared on the Nissan Skyline in 1969 with the introduction of the PGC10 Skyline GT-R. This
+          was a high-performance version designed for racing, featuring a 2.0-liter inline-six engine. It became known
+          for its success in motorsports. Notably, it won 50 consecutive races in the 1969-1971 seasons, contributing
+          to its nickname "Hakosuka," a combination of "hako" (box) and "suka" (short for "Skyline").
+          <br><a href="gtr1.html" class="btn btn-info">for more</a>
+        </p>
+      </div>
+    </div><br>
+
+  </section>
+  <div class="game-container" style="height: 200px;">
+    <h1 id="quote">
+      "Crafting timeless elegance, one vintage ride at a time."</h1>
+    <img src="bgg.png" alt="Racing Car" class="car" height="140px" width="225px">
+  </div>
+  <div id="numberDisplay">
+  </div>
+  <div id="navigation">
+    <a id="prevLink" class="btn btn-info" href="#">Previous</a>
+    <a id="nextLink" class="btn btn-info" href="#">Next</a>
+  </div>
+  <footer>
+    <p>&copy; 2024 GearGuru. All rights reserved.</p>
+    <address>
+      <p>Email: <a style="color: white;" href="mailto:gearguru1100@gmail.com">gearguru1100@gmail.com</a><br><br>
+        Phone: +91 8738**1100</p>
+    </address>
+  </footer>
+  <script>
+    function change1(mydiv) {
+      var div1 = document.getElementById(mydiv);
+      div1.style.border = "8px solid #555";
+      div1.style.fontFamily = "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif";
+    }
+    function change2(mydiv) {
+      var div1 = document.getElementById(mydiv);
+      div1.style.border = "2px solid white";
+      div1.style.fontFamily = "Arial, Helvetica, sans-serif";
+
+    }
+    let currentPage = 1;
+    function displayPage() {
+      updateNavigationLinks();
+    }
+    function updateNavigationLinks() {
+      if (currentPage > 1) {
+        document.getElementById('prevLink').href = "index.html";
+      } else {
+        document.getElementById('prevLink').href = 'index.html';
+      }
+      document.getElementById('nextLink').href = "index2.html";
+    }
+    function nextPage() {
+      currentPage++;
+      displayPage();
+    }
+    function previousPage() {
+      if (currentPage > 1) {
+        currentPage--;
+        displayPage();
+      }
+    }
+    displayPage();
+  </script>
+</body>
+
+</html>
